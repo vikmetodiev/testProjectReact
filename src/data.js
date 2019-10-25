@@ -9,7 +9,7 @@ const Data = [{
 {
     id:2,
     name:"Thrall",
-    description:"Warcraft 3 Ork",
+    description:"Warcraft III Warchief of the Horde",
     price:1507,
     url:"./thrall.jpg",
     info:"Thrall (birthname Go'el), son of Durotan and Draka, is the former Warchief of the restored shamanistic Horde, founder of the nation of Durotar in Kalimdor and one of the second wave of shaman.[12] His parents killed by Gul'dan's assassins shortly after his birth in the beginning of the First War, he was found and raised by Aedelas Blackmoore who gave Thrall his name. Raised as a slave and gladiator, he later joined Orgrim Doomhammer in freeing the orcs imprisoned after the Second War, being named Warchief after Doomhammer's death."
