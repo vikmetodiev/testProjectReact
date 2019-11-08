@@ -25,18 +25,27 @@ class ShopingCartComponent extends React.Component {
         })
         console.log(cartItems)
         return (
-            <Row style={{ float: "right", marginTop: 15,marginRight:-125 }}>
-                <Col sm="9">
-                    <Card body className="text-center">
-                        <CardTitle>Shoping Cart</CardTitle>
-                        <CardText>Yuo can find every item purchased</CardText>
-                        <CardBody><ListGroup> {cartItems}</ListGroup></CardBody>
-                        <CardText>Total Price: {this.props.price}</CardText>
 
-                        <Button>Buy</Button>
-                    </Card>
+            <Row >
+                <Col sm="5">
+                    <div className="text-center">
+                        <Card body className="text-center">
+                            <CardTitle>Shoping Cart</CardTitle>
+                            <CardText>You can find every item purchased</CardText>
+                            <CardBody>
+                                <ListGroup>
+                                    {cartItems}
+                                </ListGroup>
+                            </CardBody>
+                            <CardText>Total Price: {this.props.price}</CardText>
+
+                            <Button>Buy</Button>
+                        </Card>
+                    </div>
                 </Col>
-            </Row>)
+            </Row>
+
+        )
     }
 }
 export default ShopingCartComponent

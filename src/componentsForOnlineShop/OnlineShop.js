@@ -1,7 +1,7 @@
 import React from "react"
 import Data from "../data.js"
 import ShopingDataComponent from "./ShopingDataComponent.js"
-import { Row, Container, FormGroup, Form, Input,Button,ButtonGroup } from 'reactstrap';
+import { Row, Container, FormGroup, Form, Input, Button, ButtonGroup } from 'reactstrap';
 import ShopingCartComponent from "./ShopingCartComponent.js"
 class OnlineShop extends React.Component {
     constructor() {
@@ -15,25 +15,25 @@ class OnlineShop extends React.Component {
         this.removeItemonClick = this.removeItemonClick.bind(this);
     }
 
-    sortByProperty(a, b, prop){
-        if(a[prop] < b[prop]){
+    sortByProperty(a, b, prop) {
+        if (a[prop] < b[prop]) {
             return -1
         }
-        if(a[prop] > b[prop]){
+        if (a[prop] > b[prop]) {
             return 1
         }
         return 0
     }
 
-    sortByName(){
-        let products = this.state.productsData.sort((a,b) => this.sortByProperty(a, b, "name"))
+    sortByName() {
+        let products = this.state.productsData.sort((a, b) => this.sortByProperty(a, b, "name"))
         this.setState({
             productsData: products
         })
     }
 
-    sortByPrice(){
-        let products = this.state.productsData.sort((a,b) => this.sortByProperty(a, b, "price"))
+    sortByPrice() {
+        let products = this.state.productsData.sort((a, b) => this.sortByProperty(a, b, "price"))
         this.setState({
             productsData: products
         })
@@ -62,7 +62,7 @@ class OnlineShop extends React.Component {
     }
     removeItemonClick(name) {
         let removedItem = this.state.allProductsData
-        this.setState( {
+        this.setState({
             allProductsData: removedItem.filter(el => el !== name)
         })
     }
@@ -87,13 +87,14 @@ class OnlineShop extends React.Component {
 
                     </Form>
                     <div className="text-center">
-                <ButtonGroup ><Button onClick={this.sortByName.bind(this)}>Sort by Name</Button><Button style={{marginLeft:55}} onClick={this.sortByPrice.bind(this)}>Sort by Price</Button></ButtonGroup>
-                </div>
+                        <ButtonGroup ><Button onClick={this.sortByName.bind(this)}>Sort by Name</Button><Button style={{ marginLeft: 55 }} onClick={this.sortByPrice.bind(this)}>Sort by Price</Button></ButtonGroup>
+                    </div>
                 </Container>
                 <div>
-                    <ShopingCartComponent cartData={this.state.allProductsData} price={this.calTotalPrice(this.state.allProductsData)} removeItem={this.removeItemonClick} />
+                    <ShopingCartComponent cartData={this.state.allProductsData} price={this.calTotalPrice(this.state.allProductsData)} addToCart={this.addToCart} removeItem={this.removeItemonClick} />
                 </div>
-                <Row>
+                <Row style={{ marginRight: 25 }}>
+
                     {allProductItems}
                 </Row>
             </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Container , Badge} from "reactstrap"
+import { Container } from "reactstrap"
 function MemeGeneratorHeader() {
     return (
         <Container>

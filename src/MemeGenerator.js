@@ -6,7 +6,7 @@ class MemeGenerator extends React.Component {
     constructor() {
         super()
         this.state = {
-            randomImg: "http://i.imgflip.com/1bij.jpg",
+            randomImg: "",
             topText: "",
             botText: "",
             allImgs: []
@@ -57,7 +57,7 @@ class MemeGenerator extends React.Component {
         
                 <Container >
                     <div className="meme">
-                        <CardImg classname="text-center" src={this.state.randomImg} alt="random-img" />
+                        <CardImg className="text-center" src={this.state.randomImg} alt="random-img" />
                         <h2 className="top">{this.state.topText}</h2>
                         <h2 className="bottom">{this.state.botText}</h2>
                     </div>

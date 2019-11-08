@@ -1,9 +1,15 @@
+
 body {
-  background-color: whitesmoke;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .todo-list {
-  background-image: url("/space.01.jpg");
+  background-image: url("/Images/space.01.jpg");
   background-size: contain;
   margin: auto;
   width: 50%;
@@ -47,11 +53,6 @@ input[type=checkbox]:focus {
   outline: 0;
 }
 
-
-body {
-  margin: 0;
-  background-color: whitesmoke;
-}
 
 header {
   height: 100px;
@@ -162,23 +163,186 @@ text-align: cen
 
 
 .column {
-  width: 520px;
   padding: 20px;
   margin:15px;
-  background-image: url("/space.jpg");
+  background-image: url("/Images/space.jpg");
   color:azure;
   background-size: cover;
+  margin-left:45px;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App a {
+  text-decoration: none;
+  color: #ff6600;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vh;
+}
+
+.App-header {
+  flex: .2;
+  text-align: center;
+  background-color: #222;
+  padding: 8px;
+  color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.AttemptsLeft {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.AttemptsLeft-Number {
+  color: #ff6600;
+}
+.App a:hover {
+  text-decoration: none;
 }
 
 .column1 {
-  width: 240px;
   padding: 20px;
-  height: 390px;
+  height: 422px;
   margin:15px;
   color:black;
   background-size: cover;
 }
 .backImg {
-  background-image: url("/space.01.jpg");
+  background-image: url("/Images/space.01.jpg");
   background-size: contain;
+}
+
+.backImg1 {
+  background-image: url("/Images/trivia-tuesdays-background.jpg");
+  background-size: contain;
+}
+
+.staged{
+  opacity: 1;
+  font-size:35px;
+  float:right;
+  position: absolute;
+  margin:1px;
+}
+.staged1{
+  opacity: 1;
+  font-size:35px;
+  float:right;
+  position: absolute; 
+  margin:1px;
+
+}
+.staged2{
+  opacity: 1;
+  font-size:35px;
+  float:right;
+  position: absolute; 
+  margin:1px;
+
+}
+.stage{
+  float:right;
+  clear:right;
+  margin-right:-5px;
+  margin-top:-45px;
+  position: relative;
+	list-style: none;
+	padding: -20px;
+	color: azure;
+	text-align: left;
+  font-size: 0.9em;
+  font-style: oblique;
+  text-decoration: underline;
+  color:azure  ;
+
+}
+li{
+  list-style: none;
+  margin-top:-15px;
+}
+.list-item
+{
+    float: right;
+    clear: right;
+}
+
+.button {
+  background-color:DodgerBlue ; /* Green */
+  color: white;
+  padding: 2px ;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  position: relative;
+  float:right;
+  justify-content: center;
+  margin:2px;
+
+}
+
+.Game-content {
+  flex: .7;
+  padding-left: 8px;
+}
+
+.Game-InputPanel {
+  flex: .5 1 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.Game-InputPanel .Game-Word {
+  flex: .1;
+}
+
+.Game-InputPanel .Game-AttemptsLeft {
+  flex: .1;
+}
+
+.Game-InputPanel .Game-VirtualKeyboard {
+  flex: .8;
+}
+
+.Game-InputPanel .Game-GameWin {
+  flex: .8;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.Game-InputPanel .Game-GameOver {
+  flex: .8;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.Game-Hangman {
+  flex: .5 1 50%;
+  margin-top: -80px;
+}
+
+.Game-SideBySide {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.VirtualKeyboard {
+  text-transform: uppercase;
+}
+
+.VirtualKeyboard > div {
+  margin-bottom: 8px;
+}
+
+.VirtualKeyboard > div:last-child {
+  margin-bottom: 0;
 }

@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 function ShopingDataComponent(props) {
     return (
 
-        <Col  sm="6">
+        <Col  sm="5">
             <Card className="column1" >
 
                 <Container className="text-center">
@@ -19,7 +19,7 @@ function ShopingDataComponent(props) {
                         imageUrl: props.productItem.url,
                         imageWidth: 300,
                         imageHeight: 200,
-                    })} top width="70%" src={props.productItem.url} alt="Card image cap" style={{ cursor: "pointer" }} />
+                    })}  src={props.productItem.url} alt="Card image cap" style={{ cursor: "pointer" }} />
                     <CardBody>
                         <CardTitle>{props.productItem.name}</CardTitle>
                         <CardSubtitle>description: {props.productItem.description}</CardSubtitle>

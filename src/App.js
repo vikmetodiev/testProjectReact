@@ -1,5 +1,5 @@
 import React from "react"
-import Example from "./ReactNavMainPage.js"
+import Navs from "./ReactNavMainPage.js"
 class App extends React.Component {
 
 
@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
 
       <div className="todo-list">
-        <Example />
+        <Navs />
       </div>
     )
   }
